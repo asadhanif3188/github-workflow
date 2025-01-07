@@ -4,17 +4,29 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
-   - name: Build Step
-     run: echo "Running step of build job."
+   - name: Build Step 1
+     run: echo "Running step 1 of build job."
+   - name: Build Step 2
+     run: echo "Running step 2 of build job."
+   - name: Build Step 3
+     run: echo "Running step 3 of build job."
  test:
   runs-on: ubuntu-latest
   needs: [build]
   steps:
-   - name: Test Step
-     run: echo "Running step of the test job."
+   - name: Test Step 1
+     run: echo "Running step 1 of the test job."
+   - name: Test Step 2
+     run: echo "Running step 2 of the test job."
+   - name: Test Step 3
+     run: echo "Running step 3 of the test job."
  deploy:
   runs-on: ubuntu-latest
   needs: [test]
   steps:
-   - name: Deploy Step
-     run: echo "Running step of deploy job."
+   - name: Deploy Step 1
+     run: echo "Running step 1 of deploy job."
+   - name: Deploy Step 2
+     run: echo "Running step 2 of deploy job."
+   - name: Deploy Step 3
+     run: echo "Running step 3 of deploy job."
